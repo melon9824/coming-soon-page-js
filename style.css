@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(90,24,24);
+    background: linear-gradient(45deg, 
+                                rgb(124, 49, 49) 0%, 
+                                rgba(4, 68, 9, 0.74) 35%, 
+                                rgba(104, 84, 84, 0.911) 100%), 
+                                url(img/abdullah.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* padding: 0 8%; */
+    position: relative;
+}
+
+/*=== nav ===*/
+.nav {
+    padding: 0.5rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo img {
+    width: 2rem;
+}
+
+.logo h2 {
+    color: #ffa500;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(45deg, 
+                                #fffb29 0%, 
+                                #3768ee 50%, 
+                                #fffb29);
+    color: #fff;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    transition: background 0.4s;
+
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, 
+                                #fffb29 0%, 
+                                #3768ee 50%, 
+                                #fffb29);
+}
+
+/* hero area */
+.hero {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #f8f4f4be;
+    margin-bottom: 0.5rem;
+}
+
+.hero-para-1,
+.hero-para-2 {
+    display: none;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffa500;
+}
+
+/* launch time */
+.content h1 span {
+    font-weight: 700;
+    color: #ffa500;
+}
+
+.launch-time {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.launch-time div {
+    flex-basis: 6rem;
+    position: relative;
+}
+
+.launch-time div span {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.launch-time div p {
+    background: #ffffff15;
+    font-size: 3rem;
+    color: #ff1803;
+}
+
+/* hero form */
+.hero-form {
+    width: 90%;
+    max-width: 500px;
+    height: 3rem;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 2.5rem;
+    margin-bottom: 1.25rem;
+    caret-color: #ffa500;
+    position: relative;
+}
+
+.hero-form input {
+    flex: 1;
+    padding: 1.25rem;
+    font-size: .9rem;
+    background: transparent;
+}
+
+.hero-btn {
+    padding: 0 0.3rem;
+    position: absolute;
+    height: 3rem;
+    right: 0;
+}
+
+.social-links {
+    margin-top: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+
+.social-img {
+    width: 1.5rem;
+    background: #3768ee;
+    border-radius: 50%;
+    outline: 0.25rem solid #3768ee;
+}
+
+/* rocket image */
+.rocket {
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 6rem;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: 5%;
+        opacity: 0;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+
+/* footer */
+footer {
+    padding: .5rem 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 50%);
+}
+
+footer p {
+    padding: 0.1rem;
+    font-size: 0.75rem;
+    color: #f8f4f4;
+}
+
+footer p a {
+    color: #8fb1f3;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    transition: all 0.4s;
+}
+
+footer p a:hover {
+    text-decoration: none;
+    color: #ffa500;
+}
+
+
+/* responsive design */
+@media screen and (max-width: 575.98px) {
+    .header {
+        background-size: cover;
+    }
+
+    .nav {
+        padding: 0.5rem 4%;
+    }
+
+    .logo {
+        column-gap: 0.1rem;
+    }
+    
+    .logo img {
+        width: 1.5rem;
+    }
+    
+    .logo h2 {
+        font-size: 0.8rem;
+    }
+    
+    .getIn-btn {
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-para-1 {
+        display: block;
+    }
+
+    .hero p {
+        font-size: 0.7rem;
+    }
+    
+    .hero h1 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .hero h1 span {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: normal;
+    }
+
+    .launch-time {
+        margin-bottom: 0.5rem;
+    }
+
+    .launch-time div {
+        flex-basis: 3rem;
+    }
+
+    .launch-time div span {
+        font-size: .7rem;
+        top: 2rem;
+    }
+
+    .launch-time div p {
+        font-size: 2rem;
+    }
+
+    .hero-form {
+        width: 100%;
+        height: 2rem;
+        margin-bottom: 0;
+    }
+
+    .hero-btn {
+        height: 2rem;
+    }
+
+    .hero-form input {
+        padding: 1.25rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        margin-top: 7%;
+    }
+
+    .social-img {
+        width: 1rem;
+    }
+
+    .rocket {
+        width: 3rem;
+    }
+
+    footer p {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .hero-para-2 {
+        display: block;
+    }
+}
